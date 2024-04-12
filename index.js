@@ -5,8 +5,7 @@ const path = require("path");
 const morgan = require("morgan");
 var bodyParser = require("body-parser");
 const dotenv = require("dotenv");
-const authorRouter = require("./route/author");
-const bookRouter = require("./route/book")
+const route = require('./route/mainRoute');
 
 const app = express();
 const port = 3000;
@@ -25,10 +24,8 @@ app.get('/', (req, res) => {
 })
 
 // routes
-app.use("/v1/author", authorRouter);
-app.use("/v1/book", bookRouter);
+route(app);
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
-
 })
