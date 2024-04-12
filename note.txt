@@ -1,0 +1,6 @@
+[
+    Explain packages in project
+     1. body-parser
+        - It's a middleware in Node.js used to process data from the body of HTTP requests.
+        - It helps parse data from the body of the HTTP request (request body) and put it into the req.body property.
+]
